@@ -53,7 +53,7 @@ public class WhileLoop{
         	mv.visitFrame(Opcodes.F_SAME, 0, null, 0, null);
         	
         	mv.visitInsn(Opcodes.RETURN);
-        	mv.visitMaxs(2, 2);
+        	mv.visitMaxs(1, 1);
         	mv.visitEnd();
         	}
         	cw.visitEnd();
