@@ -44,6 +44,9 @@ public class WhileLoop{
         	mv.visitInsn(Opcodes.ICONST_5);
         	Label l1 = new Label();
         	mv.visitJumpInsn(Opcodes.IF_ICMPGE, l1);
+		mv.visitFieldInsn(Opcodes.GETSTATIC, "java/lang/System", "out", "Ljava/io/PrintStream;");
+          	mv.visitVarInsn(Opcodes.ILOAD, 1);
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, "java/io/PrintStream", "println", "(I)V", false);
         	mv.visitIincInsn(1, 1);
         	mv.visitJumpInsn(Opcodes.GOTO, l0);
         	mv.visitLabel(l1);
